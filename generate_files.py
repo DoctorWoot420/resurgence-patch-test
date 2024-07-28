@@ -1,7 +1,7 @@
 import os
 import json
 import datetime
-import hashlib
+import zlib
 
 file_names_to_ignore_crc = [
     "d2gl.ini",
@@ -19,7 +19,7 @@ def compute_crc(file_path):
     crc = 0
     with open(file_path, 'rb') as f:
         while chunk := f.read(buf_size):
-            crc = hashlib.crc32(chunk, crc)
+            crc = zlib.crc32(chunk, crc)
     return format(crc & 0xFFFFFFFF, '08x')
 
 def generate_html_index(folder_path, files):
