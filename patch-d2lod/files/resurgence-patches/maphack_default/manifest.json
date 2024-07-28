@@ -1,0 +1,36 @@
+{
+    "files":  [
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH.cfg",
+                      "deprecated":  false,
+                      "content_length":  99224,
+                      "crc":  "52c35d90",
+                      "last_modified":  "2024-07-18T21:54:16.1145554-07:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH.dll",
+                      "deprecated":  false,
+                      "content_length":  1277952,
+                      "crc":  "b9a82ace",
+                      "last_modified":  "2021-03-08T00:57:01.0000000-08:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH_build_lines.txt",
+                      "deprecated":  false,
+                      "content_length":  36473,
+                      "crc":  "ebdda494",
+                      "last_modified":  "2024-07-18T21:54:24.9667448-07:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH_settings.cfg",
+                      "deprecated":  false,
+                      "content_length":  12139,
+                      "crc":  "6a40a3a6",
+                      "last_modified":  "2024-07-18T21:54:21.0946276-07:00"
+                  }
+              ]
+}
