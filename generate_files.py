@@ -1,8 +1,7 @@
 import os
 import zlib
 import json
-import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 # Define file names to ignore CRC
 file_names_to_ignore_crc = [
@@ -30,7 +29,7 @@ def get_file_details(file_path):
     return {
         'name': os.path.basename(file_path),
         'crc': compute_crc(file_path) if not ignore_crc else '',
-        'last_modified': datetime.utcfromtimestamp(stat.st_mtime).strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        'last_modified': datetime.fromtimestamp(stat.st_mtime, timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
         'content_length': stat.st_size,
         'ignore_crc': ignore_crc,
         'deprecated': False
@@ -46,7 +45,9 @@ def generate_html_index(folder_path, files):
     for file in files:
         if file['name'] not in file_names_to_exclude:
             file_link = f"{file['name']}/" if os.path.isdir(os.path.join(folder_path, file['name'])) else file['name']
-            html_content += f"<a href='{file_link}'>{file['name']}</a>\t\t\t{file['last_modified']} \t\t\t{file['content_length']}\n"
+            last_modified = file.get('last_modified', 'N/A')
+            content_length = file.get('content_length', 'N/A')
+            html_content += f"<a href='{file_link}'>{file['name']}</a>\t\t\t{last_modified} \t\t\t{content_length}\n"
     html_content += "</pre><hr></body></html>"
     return html_content
 
