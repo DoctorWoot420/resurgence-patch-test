@@ -1,5 +1,5 @@
 import os
-import hashlib
+import zlib
 import json
 import time
 from datetime import datetime
@@ -21,7 +21,7 @@ def compute_crc(file_path):
     crc = 0
     with open(file_path, 'rb') as f:
         while chunk := f.read(4096):
-            crc = hashlib.crc32(chunk, crc)
+            crc = zlib.crc32(chunk, crc)
     return format(crc & 0xFFFFFFFF, '08x')
 
 def get_file_details(file_path):
