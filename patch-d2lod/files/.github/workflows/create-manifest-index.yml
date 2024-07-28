@@ -158,4 +158,4 @@ jobs:
         }
 
         # Start processing from the current folder
-        Process-Folder -FolderPath (Get-Location).Path
+        Process-Folder -FolderPath $GITHUB_WORKSPACE
