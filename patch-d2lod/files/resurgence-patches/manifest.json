@@ -1,55 +1,10 @@
 {
-  "files": [
-    {
-      "name": "maphack_cosmic",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "maphack_default",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "hd_3.0",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "README.md",
-      "crc": "d49b3645",
-      "last_modified": "2024-07-28T23:22:43.899981",
-      "content_length": 1117,
-      "ignore_crc": false,
-      "deprecated": false,
-      "is_dir": false
-    },
-    {
-      "name": "maphack_cosmic-lite",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "1.13c",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "current",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    },
-    {
-      "name": "hd_2.0",
-      "last_modified": "",
-      "content_length": "",
-      "is_dir": true
-    }
-  ]
+    "files":  {
+                  "ignore_crc":  false,
+                  "name":  "README.md",
+                  "deprecated":  false,
+                  "content_length":  1117,
+                  "crc":  "d49b3645",
+                  "last_modified":  "2023-11-28T01:45:46.0000000-08:00"
+              }
 }
