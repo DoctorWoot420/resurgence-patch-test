@@ -2,8 +2,8 @@ name: Generate Manifest and Index
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'patchd2-lod/files/resurgence-patches/**'
 
 jobs:
   generate-files:
