@@ -3,7 +3,7 @@ name: Generate Manifest and Index
 on:
   push:
     paths:
-      - 'patchd2-lod/files/resurgence-patches/**'
+      - 'patch-d2lod/files/resurgence-patches/**'
 
 jobs:
   generate-files:
@@ -157,5 +157,5 @@ jobs:
             }
         }
 
-        # Start processing from the current folder
-        Process-Folder -FolderPath $GITHUB_WORKSPACE
+        # Start processing from the specified folder
+        Process-Folder -FolderPath "$GITHUB_WORKSPACE/patch-d2lod/files/resurgence-patches"
