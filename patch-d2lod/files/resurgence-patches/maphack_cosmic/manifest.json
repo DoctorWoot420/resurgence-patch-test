@@ -1,40 +1,36 @@
 {
-  "files": [
-    {
-      "name": "BH.cfg",
-      "crc": "01e5459b",
-      "last_modified": "2024-07-28T23:02:09.239387",
-      "content_length": 331785,
-      "ignore_crc": false,
-      "deprecated": false,
-      "is_dir": false
-    },
-    {
-      "name": "BH.dll",
-      "crc": "9c5a5078",
-      "last_modified": "2024-07-28T23:02:09.243387",
-      "content_length": 1324032,
-      "ignore_crc": false,
-      "deprecated": false,
-      "is_dir": false
-    },
-    {
-      "name": "buffs.mpq",
-      "crc": "b8d9dfdf",
-      "last_modified": "2024-07-28T23:02:09.243387",
-      "content_length": 85377,
-      "ignore_crc": false,
-      "deprecated": false,
-      "is_dir": false
-    },
-    {
-      "name": "BH_settings.cfg",
-      "crc": "a4214ecd",
-      "last_modified": "2024-07-28T23:02:09.243387",
-      "content_length": 11734,
-      "ignore_crc": false,
-      "deprecated": false,
-      "is_dir": false
-    }
-  ]
+    "files":  [
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH.cfg",
+                      "deprecated":  false,
+                      "content_length":  331772,
+                      "crc":  "0554c38f",
+                      "last_modified":  "2024-07-19T14:51:57.5223448-07:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH.dll",
+                      "deprecated":  false,
+                      "content_length":  1324032,
+                      "crc":  "9c5a5078",
+                      "last_modified":  "2024-05-01T07:33:08.0000000-07:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "BH_settings.cfg",
+                      "deprecated":  false,
+                      "content_length":  11734,
+                      "crc":  "a4214ecd",
+                      "last_modified":  "2024-07-19T15:08:52.2964610-07:00"
+                  },
+                  {
+                      "ignore_crc":  false,
+                      "name":  "buffs.mpq",
+                      "deprecated":  false,
+                      "content_length":  85377,
+                      "crc":  "b8d9dfdf",
+                      "last_modified":  "2024-04-30T15:00:23.0000000-07:00"
+                  }
+              ]
 }
