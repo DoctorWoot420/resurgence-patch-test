@@ -42,6 +42,7 @@ def generate_html_index(folder_path, files):
     return html_content
 
 def process_folder(folder_path):
+    print(f"Processing folder: {folder_path}")
     files = []
     for item in os.listdir(folder_path):
         item_path = os.path.join(folder_path, item)
@@ -65,18 +66,21 @@ def process_folder(folder_path):
                     'is_dir': False
                 }
                 files.append(file_info)
+                print(f"Processed file: {item_path} with CRC: {file_info['crc']}")
     
     # Save the manifest for the current folder
     manifest = {'files': files}
     manifest_path = os.path.join(folder_path, 'manifest.json')
     with open(manifest_path, 'w') as manifest_file:
         json.dump(manifest, manifest_file, indent=2)
+    print(f"Generated manifest: {manifest_path}")
     
     # Generate HTML content for index.html file
     html_content = generate_html_index(folder_path, files)
     html_path = os.path.join(folder_path, 'index.html')
     with open(html_path, 'w') as html_file:
         html_file.write(html_content)
+    print(f"Generated index.html: {html_path}")
 
 # Start processing from the specified folder
 process_folder(os.path.join(os.environ['GITHUB_WORKSPACE'], 'patch-d2lod/files/resurgence-patches'))

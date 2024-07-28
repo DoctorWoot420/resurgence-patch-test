@@ -12,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+      with:
+        persist-credentials: false  # We will re-authenticate later
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -21,3 +23,13 @@ jobs:
     - name: Generate manifest and index.html
       run: |
         python generate_files.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m "Update manifest and index.html files"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
