@@ -1,8 +1,9 @@
 {
   "hd": [
-	  "3.0"
+	"2.0",
+	"3.0"
   ],
   "maphack": [
-  "default"
+	"default"
   ]
 }
