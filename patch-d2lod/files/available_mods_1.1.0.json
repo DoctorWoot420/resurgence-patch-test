@@ -1,11 +1,16 @@
 {
-    "hd": [
-        "2.0",
-		"3.0"
-    ],
-    "maphack": [
-		"default",
-		"cosmic",
-		"cosmic-lite"
-    ]
+  "hd": [
+      "1.0",
+      "2.0"
+  ],
+  "maphack": [
+  "default",
+  "cosmic",
+  "cosmic-lite"
+  ],
+  "gameservers": [
+      "GS1 - New York",
+      "GS2 - Los Angeles",
+      "GS3 - Amsterdam"
+  ]
 }
