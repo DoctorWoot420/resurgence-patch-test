@@ -7,7 +7,9 @@ from datetime import datetime, timezone
 file_names_to_ignore_crc = [
     "d2gl.ini",
     "d2fps.ini",
-    "SGD2FreeResolution.json"
+    "SGD2FreeResolution.json",
+    "BH.cfg",
+    'BH_settings.cfg'
 ]
 
 # Define file names to exclude from manifest and HTML generation

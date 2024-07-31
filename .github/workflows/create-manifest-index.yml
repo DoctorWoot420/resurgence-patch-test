@@ -24,7 +24,7 @@ jobs:
       run: pip install --upgrade pip
 
     - name: Generate manifest and index.html
-      run: python generate_files.py
+      run: python patch-d2lod/files/builder/generate_manifest_and_html_files.py
 
     - name: Commit and push changes
       env:
