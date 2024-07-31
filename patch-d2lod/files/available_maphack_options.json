@@ -1,10 +1,10 @@
 {
-  "gameservers": [
+  "game_servers": [
       "GS1 - New York",
       "GS2 - Los Angeles",
       "GS3 - Amsterdam"
   ],
-  "rune-designs": [
+  "rune_designs": [
 	"Cosmic Rainbow",
 	"Classic"
 ]
