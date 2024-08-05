@@ -3,7 +3,7 @@
         {
             "name": "BH_cosmic.cfg",
             "crc": "5448d6c8",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 296266,
             "ignore_crc": false,
             "deprecated": false
@@ -11,40 +11,40 @@
         {
             "name": ".gitignore",
             "crc": "5cdf14cf",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.872577Z",
             "content_length": 5,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "BH_settings.cfg",
-            "crc": "e69af778",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "crc": "",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 11949,
+            "ignore_crc": true,
+            "deprecated": false
+        },
+        {
+            "name": "BH_cosmic-lite.cfg",
+            "crc": "6ac53215",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
+            "content_length": 330663,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "README.md",
             "crc": "bdb49c92",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 1821,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "build_config_from_params.py",
-            "crc": "2713e147",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
-            "content_length": 1867,
-            "ignore_crc": false,
-            "deprecated": false
-        },
-        {
-            "name": "BH_cosmic-lite.cfg",
-            "crc": "6ac53215",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
-            "content_length": 330663,
+            "crc": "706a38e5",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
+            "content_length": 2052,
             "ignore_crc": false,
             "deprecated": false
         }

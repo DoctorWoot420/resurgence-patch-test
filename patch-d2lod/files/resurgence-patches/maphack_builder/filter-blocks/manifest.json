@@ -3,31 +3,31 @@
         {
             "name": "leveling-starter-gear.bh",
             "crc": "dbbb7450",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 44041,
-            "ignore_crc": false,
-            "deprecated": false
-        },
-        {
-            "name": "runes-cosmic-rainbow.bh",
-            "crc": "d33fa175",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
-            "content_length": 7655,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "runes-classic.bh",
             "crc": "5cb6ca6d",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 6175,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "runes-cosmic-rainbow.bh",
+            "crc": "d33fa175",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
+            "content_length": 7655,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "leveling-mid-gear.bh",
             "crc": "b96d46d3",
-            "last_modified": "2024-07-31T04:29:35.396488Z",
+            "last_modified": "2024-08-03T10:19:28.876577Z",
             "content_length": 55956,
             "ignore_crc": false,
             "deprecated": false
