@@ -6,13 +6,10 @@ app = Flask(__name__)
 @app.route('/merge-files', methods=['POST'])
 def merge_files():
     data = request.json
-    # Convert all keys in the data dictionary to lowercase
-    data_lower = {k.lower(): v for k, v in data.items()}
-
     # Access the rune_design key in a case-insensitive manner
-    rune_design = data_lower.get('rune_design')
+    rune_design = data.get('rune_design', '').lower()
 
-    if rune_design not in ['cosmic-rainbow', 'classic']:
+    if rune_design not in ['cosmic rainbow', 'classic']:
         return jsonify({"error": "Invalid rune_design parameter"}), 400
 
     base_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/BH_cosmic.cfg"
