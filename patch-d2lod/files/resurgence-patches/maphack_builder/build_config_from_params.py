@@ -12,10 +12,11 @@ def merge_files():
     if rune_design_param not in ['cosmic rainbow', 'classic']:
         return jsonify({"error": "Invalid rune_design parameter"}), 400
     
-    # Access the rune_design key in a case-insensitive manner
-    filter_blocks_param = data.get('filter_blocks', '').lower()
-    if filter_blocks_param not in ['sorceress', 'paladin', 'necromancer', 'amazon', 'assassin', 'barbarian', 'druid']:
-        return jsonify({"error": "Invalid filter_blocks parameter"}), 400
+    # Access the filter_blocks key in a case-insensitive manner
+    filter_blocks_param = data.get('filter_blocks', [])
+    invalid_blocks = [block for block in filter_blocks_param if block.lower() not in ['sorceress', 'paladin', 'necromancer', 'amazon', 'assassin', 'barbarian', 'druid']]
+    if invalid_blocks:
+        return jsonify({"error": f"Invalid filter_blocks parameter: {', '.join(invalid_blocks)}"}), 400
 
     # Fetch base file
     base_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/BH_cosmic.cfg"
@@ -48,20 +49,22 @@ def merge_files():
     
 
 
-    # Fetch filter blocks block file
-    if filter_blocks_param == 'sorceress':
-        filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/filter-blocks/builds-sorceress.bh"
-    if filter_blocks_param == 'barbarian':
-        filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/filter-blocks/builds-barbarian.bh"
-    if filter_blocks_param == 'leveling mid gear':
-        filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/filter-blocks/leveling-mid-gear.bh"
-    else:
-        filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/cosmic-resurgence-bh/main/new-temp/filter-blocks/builds-sorceress.bh"
+    # Fetch filter blocks block files
+    filter_blocks_block_content = ""
+    for block in filter_blocks_param:
+        if block.lower() == 'sorceress':
+            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/sorceress.bh"
+        elif block.lower() == 'barbarian':
+            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/barbarian.bh"
+        elif block.lower() == 'leveling mid gear':
+            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/leveling-mid-gear.bh"
+        else:
+            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/sorceress.bh"
 
-    filter_blocks_block_response = requests.get(filter_blocks_block_url)
-    if filter_blocks_block_response.status_code != 200:
-        return jsonify({"error": f"Failed to fetch block file for {filter_blocks_param}"}), 400
-    filter_blocks_block_content = filter_blocks_block_response.text
+        filter_blocks_block_response = requests.get(filter_blocks_block_url)
+        if filter_blocks_block_response.status_code != 200:
+            return jsonify({"error": f"Failed to fetch block file for {block}"}), 400
+        filter_blocks_block_content += filter_blocks_block_response.text + "\n"
 
     # Insert block content into base content
     base_lines = base_content.splitlines()
