@@ -1,9 +1,25 @@
 {
     "files": [
         {
+            "name": "sorceress.bh",
+            "crc": "3717b017",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
+            "content_length": 1905,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "leveling-mid-gear.bh",
+            "crc": "b96d46d3",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
+            "content_length": 55956,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
             "name": "leveling-starter-gear.bh",
             "crc": "dbbb7450",
-            "last_modified": "2024-08-05T04:43:54.003862Z",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
             "content_length": 44041,
             "ignore_crc": false,
             "deprecated": false
@@ -11,7 +27,7 @@
         {
             "name": "runes-classic.bh",
             "crc": "5cb6ca6d",
-            "last_modified": "2024-08-05T04:43:54.003862Z",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
             "content_length": 6175,
             "ignore_crc": false,
             "deprecated": false
@@ -19,16 +35,16 @@
         {
             "name": "runes-cosmic-rainbow.bh",
             "crc": "d33fa175",
-            "last_modified": "2024-08-05T04:43:54.003862Z",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
             "content_length": 7655,
             "ignore_crc": false,
             "deprecated": false
         },
         {
-            "name": "leveling-mid-gear.bh",
-            "crc": "b96d46d3",
-            "last_modified": "2024-08-05T04:43:54.003862Z",
-            "content_length": 55956,
+            "name": "barbarian.bh",
+            "crc": "8ab51664",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
+            "content_length": 414,
             "ignore_crc": false,
             "deprecated": false
         }

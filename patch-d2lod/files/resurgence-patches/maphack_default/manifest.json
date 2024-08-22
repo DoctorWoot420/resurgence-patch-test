@@ -1,51 +1,51 @@
 {
     "files": [
         {
-            "name": "BH_cosmic.cfg",
-            "crc": "dc5af6f1",
-            "last_modified": "2024-08-05T04:43:54.011862Z",
-            "content_length": 338417,
+            "name": "BH_cosmic-lite.cfg",
+            "crc": "f6244c23",
+            "last_modified": "2024-08-09T05:34:18.997518Z",
+            "content_length": 329974,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "BH.cfg",
             "crc": "",
-            "last_modified": "2024-08-05T04:43:54.003862Z",
+            "last_modified": "2024-08-09T05:34:18.989518Z",
             "content_length": 331775,
             "ignore_crc": true,
             "deprecated": false
         },
         {
-            "name": "BH.dll",
-            "crc": "9c5a5078",
-            "last_modified": "2024-08-05T04:43:54.011862Z",
-            "content_length": 1324032,
+            "name": "BH_cosmic.cfg",
+            "crc": "dc5af6f1",
+            "last_modified": "2024-08-09T05:34:18.997518Z",
+            "content_length": 338417,
             "ignore_crc": false,
             "deprecated": false
         },
         {
-            "name": "BH_settings.cfg",
-            "crc": "",
-            "last_modified": "2024-08-05T04:43:54.011862Z",
-            "content_length": 11734,
-            "ignore_crc": true,
-            "deprecated": false
-        },
-        {
-            "name": "BH_cosmic-lite.cfg",
-            "crc": "f6244c23",
-            "last_modified": "2024-08-05T04:43:54.011862Z",
-            "content_length": 329974,
+            "name": "BH.dll",
+            "crc": "9c5a5078",
+            "last_modified": "2024-08-09T05:34:18.997518Z",
+            "content_length": 1324032,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "buffs.mpq",
             "crc": "b8d9dfdf",
-            "last_modified": "2024-08-05T04:43:54.011862Z",
+            "last_modified": "2024-08-09T05:34:18.997518Z",
             "content_length": 85377,
             "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "BH_settings.cfg",
+            "crc": "",
+            "last_modified": "2024-08-09T05:34:18.997518Z",
+            "content_length": 11734,
+            "ignore_crc": true,
             "deprecated": false
         }
     ]
