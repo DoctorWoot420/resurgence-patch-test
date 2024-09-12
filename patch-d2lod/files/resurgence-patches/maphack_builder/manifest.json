@@ -1,51 +1,51 @@
 {
     "files": [
         {
-            "name": "BH_cosmic-lite.cfg",
-            "crc": "6ac53215",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
-            "content_length": 330663,
+            "name": ".gitignore",
+            "crc": "5cdf14cf",
+            "last_modified": "2024-09-12T21:30:32.829453Z",
+            "content_length": 5,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "build_config_from_params.py",
             "crc": "38c3f1b9",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
+            "last_modified": "2024-09-12T21:30:32.833453Z",
             "content_length": 4506,
-            "ignore_crc": false,
-            "deprecated": false
-        },
-        {
-            "name": "README.md",
-            "crc": "bdb49c92",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
-            "content_length": 1821,
-            "ignore_crc": false,
-            "deprecated": false
-        },
-        {
-            "name": "BH_cosmic.cfg",
-            "crc": "5448d6c8",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
-            "content_length": 296266,
-            "ignore_crc": false,
-            "deprecated": false
-        },
-        {
-            "name": ".gitignore",
-            "crc": "5cdf14cf",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
-            "content_length": 5,
             "ignore_crc": false,
             "deprecated": false
         },
         {
             "name": "BH_settings.cfg",
             "crc": "",
-            "last_modified": "2024-08-22T22:47:52.857468Z",
+            "last_modified": "2024-09-12T21:30:32.833453Z",
             "content_length": 11949,
             "ignore_crc": true,
+            "deprecated": false
+        },
+        {
+            "name": "BH_cosmic-lite.cfg",
+            "crc": "6ac53215",
+            "last_modified": "2024-09-12T21:30:32.829453Z",
+            "content_length": 330663,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "BH_cosmic.cfg",
+            "crc": "5448d6c8",
+            "last_modified": "2024-09-12T21:30:32.833453Z",
+            "content_length": 296266,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "README.md",
+            "crc": "bdb49c92",
+            "last_modified": "2024-09-12T21:30:32.833453Z",
+            "content_length": 1821,
+            "ignore_crc": false,
             "deprecated": false
         }
     ]
