@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
 import requests
+import re
 
 app = Flask(__name__)
 
 @app.route('/merge-files', methods=['POST'])
+
 def merge_files():
     data = request.json
 
@@ -65,6 +67,9 @@ def merge_files():
             if line:  # Don't track empty lines in the seen set
                 seen_lines.add(line)
 
+    # Clean up junk lines (extra blank lines and unnecessary headers)
+    unique_block_content = clean_up_junk_lines(unique_block_content)          
+
     # Insert block content into base content
     base_lines = base_content.splitlines()
     filter_blocks_insert_index = None
@@ -82,6 +87,26 @@ def merge_files():
 
     return merged_content
 
+# Keep utility functions like clean_up_junk_lines below
+def clean_up_junk_lines(lines):
+    cleaned_lines = []
+    blank_line_allowed = True
+
+    for i, line in enumerate(lines):
+        # If line is blank, allow only one blank line unless the next line contains slashes
+        if line.strip() == "":
+            if blank_line_allowed:
+                cleaned_lines.append(line)
+                blank_line_allowed = False  # Disable additional blank lines
+        else:
+            # If the current or next line has slashes, reset the blank line allowance
+            if re.match(r"^/{60,}$", line.strip()) or (i + 1 < len(lines) and re.match(r"^/{60,}$", lines[i + 1].strip())):
+                blank_line_allowed = True
+
+            cleaned_lines.append(line)
+            blank_line_allowed = True  # Reset to allow a blank line after content
+
+    return cleaned_lines
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8083)
