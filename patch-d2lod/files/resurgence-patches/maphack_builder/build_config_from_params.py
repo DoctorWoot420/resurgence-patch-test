@@ -14,7 +14,7 @@ def merge_files():
     
     # Access the filter_blocks key in a case-insensitive manner
     filter_blocks_param = data.get('filter_blocks', [])
-    invalid_blocks = [block for block in filter_blocks_param if block.lower() not in ['sorceress', 'paladin', 'necromancer', 'amazon', 'assassin', 'barbarian', 'druid']]
+    invalid_blocks = [block for block in filter_blocks_param if block.lower() not in ['sorceress', 'paladin', 'necromancer', 'amazon', 'assassin', 'barbarian', 'druid', 'leveling']]
     if invalid_blocks:
         return jsonify({"error": f"Invalid filter_blocks parameter: {', '.join(invalid_blocks)}"}), 400
 
@@ -46,25 +46,24 @@ def merge_files():
 
     if rune_design_insert_index is None:
         return jsonify({"error": "Indicator '// START RUNES BLOCK' not found in base file"}), 400
-    
-
 
     # Fetch filter blocks block files
     filter_blocks_block_content = ""
     for block in filter_blocks_param:
-        if block.lower() == 'sorceress':
-            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/sorceress.bh"
-        elif block.lower() == 'barbarian':
-            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/barbarian.bh"
-        elif block.lower() == 'leveling mid gear':
-            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/leveling-mid-gear.bh"
-        else:
-            filter_blocks_block_url = "https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/sorceress.bh"
-
+        filter_blocks_block_url = f"https://raw.githubusercontent.com/DoctorWoot420/resurgence-patch-test/main/patch-d2lod/files/resurgence-patches/maphack_builder/filter-blocks/{block.lower()}.bh"
         filter_blocks_block_response = requests.get(filter_blocks_block_url)
         if filter_blocks_block_response.status_code != 200:
             return jsonify({"error": f"Failed to fetch block file for {block}"}), 400
         filter_blocks_block_content += filter_blocks_block_response.text + "\n"
+
+    # Remove duplicate lines (except lines with '/////////' or empty lines)
+    seen_lines = set()
+    unique_block_content = []
+    for line in filter_blocks_block_content.splitlines():
+        if "///////" in line or line == "" or line not in seen_lines:
+            unique_block_content.append(line)
+            if line:  # Don't track empty lines in the seen set
+                seen_lines.add(line)
 
     # Insert block content into base content
     base_lines = base_content.splitlines()
@@ -77,13 +76,12 @@ def merge_files():
     if filter_blocks_insert_index is None:
         return jsonify({"error": "Indicator '// START FILTER BLOCKS' not found in base file"}), 400
 
-
     # Build merged file lines from all blocks
-
-    merged_lines = base_lines[:filter_blocks_insert_index] + filter_blocks_block_content.splitlines() + base_lines[filter_blocks_insert_index:rune_design_insert_index] + rune_design_block_content.splitlines() + base_lines[rune_design_insert_index:]
+    merged_lines = base_lines[:filter_blocks_insert_index] + unique_block_content + base_lines[filter_blocks_insert_index:rune_design_insert_index] + rune_design_block_content.splitlines() + base_lines[rune_design_insert_index:]
     merged_content = "\n".join(merged_lines)
 
     return merged_content
+
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8083)

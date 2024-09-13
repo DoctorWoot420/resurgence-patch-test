@@ -9,7 +9,13 @@
 	"Classic"
   ],
   "filter_blocks": [
+  "Leveling",
+	"Amazon",
+	"Assassin",
+	"Barbarian",
+	"Druid",
+	"Necromancer",
+	"Paladin",
 	"Sorceress",
-	"Barbarian"
   ]
 }
