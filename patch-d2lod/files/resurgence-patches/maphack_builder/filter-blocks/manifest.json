@@ -1,0 +1,92 @@
+{
+    "files": [
+        {
+            "name": "leveling.bh",
+            "crc": "f91976e3",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 109321,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "amazon.bh",
+            "crc": "7332bdcb",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 18624,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "sorceress.bh",
+            "crc": "9ce7dd91",
+            "last_modified": "2024-09-13T04:00:26.481028Z",
+            "content_length": 84393,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "classTemplate.bh",
+            "crc": "d10aad2b",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 57284,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "barbarian.bh",
+            "crc": "207801eb",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 35429,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "druid.bh",
+            "crc": "5c6ffba7",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 31524,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "runes-classic.bh",
+            "crc": "5cb6ca6d",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 6175,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "paladin.bh",
+            "crc": "e4620cfb",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 31802,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "runes-cosmic-rainbow.bh",
+            "crc": "d33fa175",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 7655,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "assassin.bh",
+            "crc": "246a21b5",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 19677,
+            "ignore_crc": false,
+            "deprecated": false
+        },
+        {
+            "name": "necromancer.bh",
+            "crc": "9c2c42f5",
+            "last_modified": "2024-09-13T04:00:26.477028Z",
+            "content_length": 30428,
+            "ignore_crc": false,
+            "deprecated": false
+        }
+    ]
+}
